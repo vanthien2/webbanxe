@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="MinKi.Client.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Website Bán Xe Máy</title>
+    <link href="../Styles/StyleSheetHome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="frm">
+        <div id="Full">
+            <div id="main">
+                <div id="header">
+                    
+                      <div id="menu">
+                        <div>
+                            <ul>
+                                <li id="logo">
+                                    <img src="../Images/logo3.jpg"/>
+                                </li>
+                                <li>
+                                    <a href="Default.aspx">Trang Chủ</a>
+                                </li>
+                                <li>
+                                    <a href="SPBanChay.aspx">Sản Phẩm Bán Chạy</a>
+                                </li>
+                                <li>
+                                    <a href="https://yamaha-motor.com.vn/xe/">Tin Tức</a>
+                                </li>
+                                <li>
+                                    <a href="GioiThieu.aspx">Giới Thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.yamaha-motor.com.vn/dai-ly-26">Đại Lý</a>
+                                </li>
+                                <li>
+                                  <asp:TextBox style="padding-top: 4px;height: 10px;margin-top: 7px; border-radius: 6px;width:150px" ID="txtTuKhoa" runat="server"></asp:TextBox><asp:Button style="padding-top: 0px;margin-left: 5px;margin-top: 7px;background:#ffffff;color:#111; border-radius: 6px;" ID="btnTimKiem" runat="server" Text="Tìm Kiếm" OnClick="btnTimKiem_Click" /></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="banner">
+                        <img src="../Images/s1.jpg" />
+                    </div>
+                  
+                </div>
+                <div id="content">
+                    <div id="left">
+                  
+                        <div class="box-head">
+                            Danh Mục Sản Phẩm
+                        </div>
+                       <ul id="left-menu" class="menu">
+                           <asp:DataList ID="DataList1" runat="server" DataKeyField="MaDX" DataSourceID="sqlDataSource1" >
+                                  <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "DongXe.aspx?id="+Eval("MaDX") %>'
+                             Text='<%# Eval("TenDX") %>'></asp:HyperLink>
+                        </ItemTemplate>
+
+                           </asp:DataList>
+
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source= NGHIAPC;Initial Catalog=Website;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT  * FROM [DongXe] order by(MaDX) desc"></asp:SqlDataSource>
+  
+
+                       </ul>
+               
+                     <div class="box-head">
+                            Hỗ trợ trực tuyến
+                        </div>
+                        <div class="tuvan">
+                        <div>
+                            <div class="onname">Tư Vấn trực tiếp</div>
+                            <div class="online">
+                                <div class="onname1" style="color:#00ffff;">Kinh Doanh</div>
+                            <div>Nguyễn Văn Huy</div>
+                            <div>0979540739</div>
+                            <a href="https://www.facebook.com/messages/dat.hoangthanh.7"><img src="../Images/skype_icon.png" align="center" alt="No Images" style="width:170px;height:50px"></a>
+                        </div>
+                            </div>
+               
+                            </div>
+                        <div class="box-head">Số lượt truy cập</div>
+                            <div style="margin: 10px; text-align: center; color: #111">
+                            <asp:Label ID="lblsonguoitruycap" runat="server"></asp:Label>
+                            <br />
+                           <asp:Label ID="lbSoNguoiOnline" runat="server"></asp:Label>
+                        </div>
+                        
+                    </div>
+                    <div id="middle">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                       </div>
+                        <div id="right">
+
+                            <div class="box-head">Giỏ Hàng</div>
+                           <div id="cart"> <a href="GioHang.aspx"><img src="../Images/cart1.png" /></a></div>
+                            
+                           <br />
+                                  <div class="box-head">Tra Cứu Xe</div>
+                            
+                            <div class="tracuu">
+                  <table>
+                  <tr>
+                  <td>
+                      <br />
+                  <asp:DropDownList ID="DrGia" Width="179px" runat="server">
+                      <asp:ListItem>-------Tất Cả Mức Giá-------</asp:ListItem>
+                      <asp:ListItem>Từ 10 Đến 20 Triệu</asp:ListItem>
+                      <asp:ListItem>Từ 20 Đến 30 Triệu</asp:ListItem>
+                      <asp:ListItem>Từ 40 Đến 50 Triệu</asp:ListItem>
+                      <asp:ListItem>Từ 50 Đến 60 Triệu</asp:ListItem>
+                      <asp:ListItem>Từ 60 Đến 70 Triệu</asp:ListItem>
+                      <asp:ListItem>Từ 80 Đến 90 Triệu</asp:ListItem>
+                      <asp:ListItem>Trên 100 Triệu</asp:ListItem>
+                   </asp:DropDownList>
+                   </td>
+                  </tr>
+                   
+                        <tr><td ><asp:Button ID="tnTim" runat="server"  Text="Tìm Kiếm" style="margin-left: 57px; border-radius: 5px;" OnClick="btnTim_Click" /></td></tr>
+                        </table>
+                                </div>
+                                   <br />
+                            <div class="box-head">Quảng Cáo</div>
+                            <div>
+
+                                <asp:ImageButton ID="ImageButton1" runat="server" Height="280px" ImageUrl="~/Images/QC.jpg" PostBackUrl="http://www.baomoi.com/Minh-Hang-tuoi-tan-trong-mot-show-quang-cao-xe/c/14418342.epi" Width="100%" />
+                            </div>               
+                </div>
+                    </div>
+                <div id="footer" >
+                    <address style="height: 80px; margin-top: 0px; color: #C0C0C0; width: 995px;">
+                        <span class="style1" style="font-family: Cambria; font-size: medium; color: #000000">
+                            &nbsp;Website Đại Lý Yamaha <br />
+                            Designer: Lê Quang Nghĩa<br />
+                            Email: nghialequang21@gmail.com</span><br />
+                    </address>
+                </div>
+            </div>
+            </div>
+        </form>
+</body>
+</html>

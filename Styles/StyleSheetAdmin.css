@@ -1,0 +1,130 @@
+﻿#khung{
+    width:100%;
+    height:100%;
+}
+.menu_traiAD
+{ 
+    padding-top:60px;
+	float: left;
+	width: 189px;
+	line-height: 2em;
+	font-size: 14px;
+	min-height:600px;
+	border-left:solid thin Black;
+    border-right:solid thin Black;
+    
+    border-right-color: #C0C0C0; 
+	background-color: #fff;
+    border-left-style: outset; border-left-width: thin;
+    border-left-color: #C0C0C0; 
+	}
+/*Phần menu bên trái để chọn nhanh*/
+.menunhanh
+{
+    
+	background-color: #ffffff;
+	font-weight: inherit;
+	text-align: left;
+	color: Black;
+	width: 185px;
+	font-family: Arial;
+	position: relative;
+	padding-left: 0px;
+	top: 0px;
+	left: 0px;
+	height: 23px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.menunhanh:hover
+{
+	background-color:#ffffff;
+	cursor: pointer;
+}
+.thanhngangAD
+{
+	text-align: center;
+	color: White;
+	font-weight: bold;
+	height: 34px;
+	width: 230px;
+}
+.noidungAD
+{
+	width:100%;
+	background-color:White;
+	margin:0px 0px 0px 0px;
+	/*margin-left:180px;*/
+}
+
+/*Phần nội dung trogn các trang con của Admin*/
+#contentAD
+{
+	width: 1131px;
+	float: left;
+	margin-top: 5px;
+	min-height: 300px;
+	margin-left:5px;
+}
+
+#footer
+{
+     text-align:center;
+    font-size: 12px;
+    font-family:'Times New Roman';
+      min-height:100px;
+    background:none;
+    clear:both;
+      margin:auto 0px auto auto;
+    color:white;
+    width:100%;
+}
+#headAd {
+    background-color: #ffffff;
+    background-repeat:no-repeat;
+    height: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Times New Roman';
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: blue;
+}
+.box-head {
+    background: Black;
+  font-weight: inherit;
+  font-family:Arial;
+    color: #fff;
+    text-align: center;
+    height: 35px;
+    line-height: 32px;    
+}
+.ctpn{
+    padding-top:37px;
+    
+}
+
+#left-menu a {
+    width:178px;
+    color: #002069;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    position: relative;
+    border-bottom: 1px solid #91bdea;
+    display: block;
+    text-align:left;
+
+}
+
+
+#left-menu a:hover {
+       background-color:#8f8f8f;
+}

@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageAdmin.master.cs" Inherits="MinKi.Admin.MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title>Quản Trị Hệ Thống</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/StyleSheetAdmin.css" rel="stylesheet" />
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server">
+        <div id="khung">
+            <div>
+                <div class="menu_traiAD menu" id="left-menu">
+            <label runat="server" style="color:blue;font-size:15px;font-weight:bold;">Xin Chào:   </label><label style="color:red;font-size:25px;font-family:'Times New Roman';font-weight:bold" id="lbUS" runat="server"></label>
+                    <div class="box-head"">
+                        QUẢN LÝ NGƯỜI DÙNG</div>
+                    <div>
+                       <a href="NguoiDung.aspx" style="text-decoration: none;">
+                            Thêm Người Dùng</a>
+                    </div>
+                    <div>
+                        <a href="Doimatkhau.aspx" style="text-decoration: none;">
+                            Đổi Mật Khẩu</a>
+                    </div>
+                    <div class="box-head">
+                        CẬP NHẬT</div>
+                    <div>
+                     <a href="PhieuNhap.aspx" style="text-decoration: none;">
+                            Nhập hàng</a>
+                    </div>
+                      <div>
+                       <a href="BanHang.aspx" style="text-decoration: none;">
+                           Bán Hàng</a></div>
+                    <div>
+                    <a href="SP.aspx" style="text-decoration: none;">
+                            Sản phẩm</a>
+                    </div>
+                    <div>
+              
+              <a href="LoaiXe.aspx" style="text-decoration: none;">
+                            Loại Xe</a></div>
+                    <div >
+                       <a href="HSX.aspx" style="text-decoration: none;">
+                            Dòng Xe</a></div>
+                      <div class="box-head">  THỐNG KÊ</div>
+                <div>
+             <a href="SanPhamDaHet.aspx" style="text-decoration: none;">
+                        Sản phẩm đã hết</a></div>
+                <div>
+             <a href="ChiTieu.aspx" style="text-decoration: none;">
+                        Nhập Hàng</a></div>
+                    <div>
+                 <a href="DoanhThu.aspx" style="text-decoration: none;">
+                        Doanh Thu</a></div>
+                <div>
+                  <a href="SanPhamBanChay.aspx" style="text-decoration: none;">
+                        Sản phẩm bán chạy nhất</a></div>
+                </div>
+                <div id="contentAD">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                </div>
+                &nbsp;<div id="footer" 
+                    style="border-top: thin outset #C0C0C0;">
+                    <address style="height: 83px; margin-top: 0px; color: #C0C0C0;">
+                        <span class="style1" style="font-family: Cambria; font-size: medium; color: #000000">
+                            &nbsp;Website Bán Xe Máy<br />
+                               Designer: Lê Quang Nghĩa<br />
+                            Email: nghialequang21@gmail.com</span><br />
+                    </address>
+                </div>
+            </div>
+    </div>
+
+ 
+    </form>
+</body>
+</html>
